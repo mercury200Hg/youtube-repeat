@@ -1,22 +1,15 @@
-// Initially
-var current = document.getElementsByClassName("ytp-time-current")[0].innerHTML;
-var total = document.getElementsByClassName("ytp-time-duration")[0].innerHTML;
-while(timeToSec(current) < timeToSec(total)) {
-	//Do nothing but wait and update current
-	current = document.getElementsByClassName("ytp-time-current")[0].innerHTML;
-}
-console.log(current);
-if(timeToSec(current) == timeToSe(total)) {
-	// Click replay.
-	console.log("replay");
-	replay();
-}
+var vid = document.getElementsByClassName("video-stream html5-main-video")[0];
+console.log(vid);
+
+vid.onended = function() {
+    replay();
+};
+
 
 function replay() {
 	var button = document.getElementsByClassName("ytp-play-button ytp-button")[0];
-		if(button.getAttribute("title")=="Replay") {
-			button.click();
-		}
+	if(button.getAttribute("title")=="Replay") {
+		button.click();
 	}
 }
 
@@ -27,11 +20,4 @@ function sleep(milliseconds) {
       break;
     }
   }
-}
-
-
-function timeToSec(time) {
-	var minute = parseInt(time.split(":")[0]);
-	var seconds = parseInt(time.split(":")[1]);
-	return (minute*60)+seconds;
 }
