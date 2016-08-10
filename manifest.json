@@ -1,9 +1,10 @@
 {
    "manifest_version": 2,
    "name": "Invite all to like page",
-   "page_action": {
+   "browser_action": {
       "default_icon": "fb.png",
-      "default_title": "Invite All"
+      "default_popup": "popup.html",
+      "default_title": "Click repeat"
    },
    "description": "Automatically invite all your friends to like your page",
    "icons": {
@@ -19,6 +20,7 @@
       "matches": [ "*://*.youtube.com/*" ],
       "run_at": "document_end"
    } ],
-   "permissions": [ "*://*.youtube.com/*" ],
+   "permissions": [ "*://*.youtube.com/*","storage" ],
    "version": "1.0.0"
+   
 }
