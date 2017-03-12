@@ -1,17 +1,18 @@
-var repeat_y = false;
-chrome.storage.sync.get("repeat_y",function(result) {
-	repeat_y = result.repeat_y;
-});
-console.log("Repeat video : "+repeat_y);
-var check = document.getElementById("repeat_y");
-check.onchange = update_repeat(check.checked);
+document.body.onload = function() {
+	chrome.storage.sync.get("repeat_y",function (items) {
+		if(!chrome.runtime.error) {
+			console.log(items);
+			document.getElementById("repeat_y").checked = items.repeat_y;
+		}
+	});
+}
 
-
-
-function update_repeat(repeat_y) {
-	console.log("Clicked");
-	chrome.storage.sync.set({'repeat_y': repeat_y}, function() {
-	  // Notify that we saved.
-	  //alert("Settings saved");
+document.getElementById("repeat_y").onchange = function() {
+	var value = document.getElementById("repeat_y").checked;
+	console.log(value);
+	chrome.storage.sync.set({"repeat_y":value},function(){
+		if(chrome.runtime.error) {
+			console.log("runtime error");
+		}
 	});
 }

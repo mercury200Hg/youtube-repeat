@@ -1,15 +1,15 @@
 {
    "manifest_version": 2,
-   "name": "Invite all to like page",
+   "name": "Youtube Repeat",
    "browser_action": {
-      "default_icon": "fb.png",
+      "default_icon": "loop-arrow-32.png",
       "default_popup": "popup.html",
       "default_title": "Click repeat"
    },
-   "description": "Automatically invite all your friends to like your page",
+   "description": "Save your preference once and it will repeat the video for your favourite songs",
    "icons": {
-      "128": "fb.png",
-      "48": "fb.png"
+      "128": "loop-arrow-128.png",
+      "32": "loop-arrow-32.png"
    },
    "background": {
       "scripts": [ "background.js" ]
@@ -20,7 +20,7 @@
       "matches": [ "*://*.youtube.com/*" ],
       "run_at": "document_end"
    } ],
-   "permissions": [ "*://*.youtube.com/*","storage" ],
+   "permissions": ["activeTab","tabs","webNavigation","*://*.youtube.com/*","storage" ],
    "version": "1.0.0"
    
 }
