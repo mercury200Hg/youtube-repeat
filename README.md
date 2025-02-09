@@ -1,5 +1,7 @@
 # YouTube Repeat Chrome Extension
 
+![YouTube Repeat Logo](icons/loop-arrow-128.png)
+
 ## Overview
 
 The YouTube Repeat Chrome Extension allows users to automatically repeat YouTube videos based on their preference for each tab. The extension provides a simple interface to enable or disable the repeat functionality directly from the browser's toolbar.
@@ -8,7 +10,7 @@ The YouTube Repeat Chrome Extension allows users to automatically repeat YouTube
 
 - **Repeat YouTube Videos**: Automatically repeat videos on YouTube when they finish playing.
 - **Tab-Specific Settings**: Store repeat preferences for individual tabs, which are cleared when the tab is closed.
-- **User Feedback**: Provides tooltips to guide users when the extension cannot be used, such as when no video is playing.
+- **User Feedback**: Provides tooltips to guide users when the extension cannot be used.
 
 ## Installation
 
@@ -34,7 +36,6 @@ You can install the latest release of the YouTube Repeat extension directly from
 2. **Enable Repeat**: Click the extension icon in the toolbar to open the popup. Check the "Repeat Video" checkbox to enable repeat for the current tab.
 3. **Tooltips**: 
    - If the tab is not a YouTube page, a red tooltip will inform you that the URL doesn't match YouTube.
-   - If no video is playing, an orange tooltip will prompt you to play a video before enabling repeat.
 
 ## Development
 
