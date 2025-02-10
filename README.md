@@ -60,3 +60,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For questions or feedback, please contact [yourname@example.com](mailto:yourname@example.com).
+
+## Google site verification:
+google-site-verification: googled1c731e1c7ef1353.html
